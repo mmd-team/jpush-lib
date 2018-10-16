@@ -4,6 +4,12 @@ android {
     compileSdkVersion 28
 
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
 
     defaultConfig {
         minSdkVersion 14
@@ -12,7 +18,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+//        manifestPlaceholders = [PACKAGE_NAME: "com.mmdteam.jpush.lib"]
     }
 
     buildTypes {
